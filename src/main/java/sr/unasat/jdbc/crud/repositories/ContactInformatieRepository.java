@@ -43,9 +43,9 @@ public class ContactInformatieRepository {
                     " on l.id = ci.land_id";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
-            //STEP 5: Extract data from result set
+
             while (rs.next()) {
-                //Retrieve by column name
+
                 int id = rs.getInt("id");
                 String adres = rs.getString("adres");
                 int telefoonNummer = rs.getInt("telefoon_nummer");

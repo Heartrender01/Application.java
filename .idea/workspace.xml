@@ -7,14 +7,9 @@
     <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="no message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/Afdeling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/Afdeling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/AfdelingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/AfdelingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/Afdeling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/Afdeling.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/AfdelingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/AfdelingRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +144,7 @@
       <workItem from="1626573284794" duration="4449000" />
       <workItem from="1626578518102" duration="1939000" />
       <workItem from="1626580532468" duration="476000" />
-      <workItem from="1626625934353" duration="5160000" />
+      <workItem from="1626625934353" duration="10663000" />
     </task>
     <task id="LOCAL-00001" summary="no message">
       <created>1626628214814</created>
@@ -158,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626628214814</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="no message">
+      <created>1626631603419</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626631603419</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +188,14 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$PROJECT_DIR$/../../../../Program Files/Amazon Corretto/jdk11.0.10_9/lib/src.zip!/jdk.internal.vm.compiler/org.graalvm.compiler.core.test/src/org/graalvm/compiler/core/test/ImplicitNullCheckTest.java</url>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java</url>
+          <line>9</line>
+          <properties class="sr.unasat.jdbc.crud.app.Application" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
