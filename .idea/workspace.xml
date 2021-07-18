@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/Land.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/LandRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crud.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="no message">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/ContactInformatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/ContactInformatie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/PersoonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/PersoonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/adres_boek.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/adres_boek.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/Afdeling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/Afdeling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/AfdelingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/AfdelingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/Afdeling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/Afdeling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/AfdelingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/AfdelingRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -152,8 +149,16 @@
       <workItem from="1626573284794" duration="4449000" />
       <workItem from="1626578518102" duration="1939000" />
       <workItem from="1626580532468" duration="476000" />
-      <workItem from="1626625934353" duration="2116000" />
+      <workItem from="1626625934353" duration="5160000" />
     </task>
+    <task id="LOCAL-00001" summary="no message">
+      <created>1626628214814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626628214814</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +175,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="no message" />
+    <option name="LAST_COMMIT_MESSAGE" value="no message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

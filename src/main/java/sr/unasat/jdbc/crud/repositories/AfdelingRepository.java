@@ -1,6 +1,7 @@
 package sr.unasat.jdbc.crud.repositories;
 
 import sr.unasat.jdbc.crud.entities.Afdeling;
+import sr.unasat.jdbc.crud.entities.Persoon;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -28,22 +29,19 @@ public class AfdelingRepository {
     }
 
     public List<Afdeling> findAllRecords(){
-        List<Afdeling> afdelingList = new ArrayList<>();
+        List<Afdeling> afdelingList = new ArrayList<Afdeling>();
         Statement stmt = null;
-
         try {
             stmt = connection.createStatement();
             String sql = "select * from afdeling";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
-
             while (rs.next()) {
 
                 int id = rs.getInt("id");
                 String afdeling = rs.getString("afdeling");
 
-                afdelingList.add(new Afdeling(id));
-
+                afdelingList.add(new Afdeling(id, afdeling));
             }
             rs.close();
 
@@ -56,5 +54,41 @@ public class AfdelingRepository {
         return afdelingList;
     }
 
+    public int insertOneRecord(Afdeling afdeling) {
+        PreparedStatement stmt = null;
+        int result = 0;
+        try {
+            String sql = "insert into afdeling (afdeling) values(?)";
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1, afdeling.getAfdeling());
+            result = stmt.executeUpdate();
+            System.out.println("resultset: " + result);
+
+        } catch (SQLException e) {
+
+        } finally {
+
+        }
+        return result;
+    }
+
+    public int deleteOneRecord(Afdeling afdeling){
+        PreparedStatement stmt = null;
+        int result = 0;
+        try {
+            String sql = "DELETE FROM afdeling WHERE afdeling.id = ?";
+            stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, afdeling.getId());
+            result = stmt.executeUpdate();
+
+            System.out.println("deleted: " + afdeling.getId());
+
+        } catch (SQLException e) {
+
+        } finally {
+
+        }
+        return result;
+    }
 
 }

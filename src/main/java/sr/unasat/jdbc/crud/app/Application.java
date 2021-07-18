@@ -10,6 +10,10 @@ public class Application {
     public static void main(String[] args) {
 
         AfdelingRepository afdelingRepo = new AfdelingRepository();
+
+       // Afdeling products = new Afdeling("Products");
+       // afdelingRepo.insertOneRecord(products);
+
         List<Afdeling> afdelingList = afdelingRepo.findAllRecords();
         for (Afdeling afdeling : afdelingList) {
             System.out.println(afdeling);
