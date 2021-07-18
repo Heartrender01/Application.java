@@ -1,17 +1,17 @@
 package sr.unasat.jdbc.crud.repositories;
 
-import com.mysql.jdbc.Driver;
-import sr.unasat.jdbc.crud.entities.ContactInformatie;
-import sr.unasat.jdbc.crud.entities.Persoon;
+
+import sr.unasat.jdbc.crud.entities.Geslacht;
+import sr.unasat.jdbc.crud.entities.Land;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersoonRepository {
+public class GeslachtRepository {
     private Connection connection;
 
-    public PersoonRepository() {
+    public GeslachtRepository() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("De driver is geregistreerd!");
@@ -29,24 +29,24 @@ public class PersoonRepository {
         }
     }
 
-    public List<Persoon> findAllRecords(){
-        List<Persoon> persoonList = new ArrayList<Persoon>();
+    public List<Geslacht> findAllRecords(){
+        List<Geslacht> geslachtList = new ArrayList<Geslacht>();
         Statement stmt = null;
         try {
             stmt = connection.createStatement();
-            String sql = "select * from persoon";
+            String sql = "select * from geslacht";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
             //STEP 5: Extract data from result set
             while (rs.next()) {
                 //Retrieve by column name
                 int id = rs.getInt("id");
-                String naam = rs.getString("naam");
+                String geslacht = rs.getString("geslacht");
             /*    //Display values
                System.out.print("ID: " + id);
                System.out.print(", Age: " + naam);*/
-                persoonList.add(new Persoon(id, naam));
-                //  persoonList.add(new Persoon(rs.getInt("id"), rs.getString("naam")));
+                geslachtList.add(new Geslacht(id, geslacht));
+                //  geslachtList.add(new Geslacht(rs.getInt("id"), rs.getString("geslacht")));
             }
             rs.close();
 
@@ -56,16 +56,16 @@ public class PersoonRepository {
         } finally {
 
         }
-        return persoonList;
+        return geslachtList;
     }
 
-    public int insertOneRecord(Persoon persoon) {
+    public int insertOneRecord(Geslacht geslacht) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "insert into persoon (naam) values(?)";
+            String sql = "insert into geslacht (geslacht) values(?)";
             stmt = connection.prepareStatement(sql);
-            stmt.setString(1, persoon.getNaam());
+            stmt.setString(1, geslacht.getGeslacht());
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 
@@ -77,16 +77,15 @@ public class PersoonRepository {
         return result;
     }
 
-    public int deleteOneRecord(Persoon persoon){
+    public int deleteOneRecord(Geslacht geslacht){
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM persoon WHERE persoon.id = ?";
+            String sql = "DELETE FROM geslacht WHERE gesclacht.id = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, persoon.getId());
+            stmt.setInt(1, geslacht.getId());
             result = stmt.executeUpdate();
-
-                    System.out.println("deleted: " + persoon.getId());
+            System.out.println("deleted: " + geslacht.getId());
 
         } catch (SQLException e) {
 

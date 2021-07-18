@@ -1,17 +1,16 @@
 package sr.unasat.jdbc.crud.repositories;
 
-import com.mysql.jdbc.Driver;
-import sr.unasat.jdbc.crud.entities.ContactInformatie;
+import sr.unasat.jdbc.crud.entities.Land;
 import sr.unasat.jdbc.crud.entities.Persoon;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersoonRepository {
+public class LandRepository {
     private Connection connection;
 
-    public PersoonRepository() {
+    public LandRepository() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("De driver is geregistreerd!");
@@ -29,12 +28,12 @@ public class PersoonRepository {
         }
     }
 
-    public List<Persoon> findAllRecords(){
-        List<Persoon> persoonList = new ArrayList<Persoon>();
+    public List<Land> findAllRecords(){
+        List<Land> landList = new ArrayList<Land>();
         Statement stmt = null;
         try {
             stmt = connection.createStatement();
-            String sql = "select * from persoon";
+            String sql = "select * from land";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
             //STEP 5: Extract data from result set
@@ -45,8 +44,8 @@ public class PersoonRepository {
             /*    //Display values
                System.out.print("ID: " + id);
                System.out.print(", Age: " + naam);*/
-                persoonList.add(new Persoon(id, naam));
-                //  persoonList.add(new Persoon(rs.getInt("id"), rs.getString("naam")));
+                landList.add(new Land(id, naam));
+                //  landList.add(new Land(rs.getInt("id"), rs.getString("naam")));
             }
             rs.close();
 
@@ -56,16 +55,16 @@ public class PersoonRepository {
         } finally {
 
         }
-        return persoonList;
+        return landList;
     }
 
-    public int insertOneRecord(Persoon persoon) {
+    public int insertOneRecord(Land land) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "insert into persoon (naam) values(?)";
+            String sql = "insert into land (naam) values(?)";
             stmt = connection.prepareStatement(sql);
-            stmt.setString(1, persoon.getNaam());
+            stmt.setString(1, land.getNaam());
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 
@@ -77,16 +76,15 @@ public class PersoonRepository {
         return result;
     }
 
-    public int deleteOneRecord(Persoon persoon){
+    public int deleteOneRecord(Land land){
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM persoon WHERE persoon.id = ?";
+            String sql = "DELETE FROM land WHERE land.id = ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, persoon.getId());
+            stmt.setInt(1, land.getId());
             result = stmt.executeUpdate();
-
-                    System.out.println("deleted: " + persoon.getId());
+            System.out.println("deleted: " + land.getId());
 
         } catch (SQLException e) {
 

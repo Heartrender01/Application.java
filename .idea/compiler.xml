@@ -9,8 +9,11 @@
         <module name="crud" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="crud" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="crud" target="11" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="TypeScriptCompiler">
+    <option name="useService" value="false" />
   </component>
 </project>

@@ -1,6 +1,8 @@
 package sr.unasat.jdbc.crud.repositories;
 
 import sr.unasat.jdbc.crud.entities.ContactInformatie;
+import sr.unasat.jdbc.crud.entities.Geslacht;
+import sr.unasat.jdbc.crud.entities.Land;
 import sr.unasat.jdbc.crud.entities.Persoon;
 
 import java.sql.*;
@@ -9,6 +11,7 @@ import java.util.List;
 
 public class ContactInformatieRepository {
     private Connection connection;
+
     public ContactInformatieRepository() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -16,11 +19,11 @@ public class ContactInformatieRepository {
 
             String URL = "jdbc:mysql://localhost:3306/adres_boek";
             String USER = "root";
-            String PASS = "root";
+            String PASS = "Wh!te_RabB!t_13";
             connection = DriverManager.getConnection(URL, USER, PASS);
             System.out.println(connection);
         } catch (ClassNotFoundException ex) {
-            System.out.println("Error: unable to load driver class!");
+            System.out.println("Error: unable to load contact_info!");
             System.exit(1);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -32,9 +35,12 @@ public class ContactInformatieRepository {
         Statement stmt = null;
         try {
             stmt = connection.createStatement();
-            String sql = "select ci.id, ci.adres, ci.telefoon_nummer , p.id pid, p.naam pnaam from contact_informatie ci" +
+            String sql = "select ci.id, ci.adres, ci.telefoon_nummer , p.id pid, p.naam pnaam, l.id lid, l.naam land_naam" +
+                    " from contact_informatie ci" +
                     " join persoon p" +
-                    " on p.id = ci.persoon_id";
+                    " on p.id = ci.persoon_id" +
+                    " join land l  " +
+                    " on l.id = ci.land_id";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
             //STEP 5: Extract data from result set
@@ -48,8 +54,12 @@ public class ContactInformatieRepository {
                 String persoonNaam = rs.getString("pnaam");
                 Persoon persoon = new Persoon(persoonId, persoonNaam);
 
-                contactList.add(new ContactInformatie(id, adres, telefoonNummer, persoon));
-                //  persoonList.add(new Persoon(rs.getInt("id"), rs.getString("naam")));
+                int landId = rs.getInt("lid");
+                String landNaam = rs.getString("land_naam");
+                Land land = new Land(landId, landNaam);
+
+                contactList.add(new ContactInformatie(id, adres, telefoonNummer, persoon, land));
+
             }
             rs.close();
 
@@ -66,9 +76,14 @@ public class ContactInformatieRepository {
         ContactInformatie contactInformatie = null;
         PreparedStatement stmt = null;
         try {
-            String sql = "select ci.id, ci.adres, ci.telefoon_nummer , p.id pid, p.naam pnaam from contact_informatie ci" +
+            String sql = "select ci.id, ci.adres, ci.telefoon_nummer , p.id pid, p.naam pnaam, l.id lid, l.naam land_naam" +
+                    " from contact_informatie ci" +
                     " join persoon p" +
-                    " on p.id = ci.persoon_id where ci.telefoon_nummer = ? or ci.adres = ?";
+                    " on p.id = ci.persoon_id" +
+                    " join land l" +
+                    " on l.id = ci.land_id where ci.telefoon_nummer = ? or ci.adres = ?";
+
+
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, telNum);
             stmt.setString(2, ciAdres);
@@ -85,7 +100,11 @@ public class ContactInformatieRepository {
                 String persoonNaam = rs.getString("pnaam");
                 Persoon persoon = new Persoon(persoonId, persoonNaam);
 
-                contactInformatie = new ContactInformatie(id, adres, telefoonNummer, persoon);
+                int landId = rs.getInt("lid");
+                String landNaam = rs.getString("land_naam");
+                Land land = new Land(landId, landNaam);
+
+                contactInformatie = new ContactInformatie(id, adres, telefoonNummer, persoon, land);
             }
             rs.close();
 

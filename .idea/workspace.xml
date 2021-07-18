@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/Land.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/LandRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crud.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/ContactInformatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/ContactInformatie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/PersoonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/PersoonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/adres_boek.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/adres_boek.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HierarchyBrowserManager">
+    <option name="SORT_ALPHABETICALLY" value="true" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../../Program Files/Amazon Corretto/jdk11.0.10_9/lib/src.zip!/java.base/java/lang/NullPointerException.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\sherany\.m2\repository" />
+        <option name="usePluginRegistry" value="true" />
+        <option name="userSettingsFile" value="C:\Users\sherany\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1t60iRavwvvAmBRastKaFR1crAK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="sr.unasat.jdbc.crud.app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sr.unasat.jdbc.crud.app.Application" />
+      <module name="crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sr.unasat.jdbc.crud.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="" />
+      <created>1622074362329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622074362329</updated>
+      <workItem from="1622074364405" duration="368000" />
+      <workItem from="1622074842309" duration="914000" />
+      <workItem from="1622078878798" duration="107000" />
+      <workItem from="1622079031476" duration="69000" />
+      <workItem from="1622079103566" duration="426000" />
+      <workItem from="1622285374372" duration="2528000" />
+      <workItem from="1622299944387" duration="6226000" />
+      <workItem from="1622383137983" duration="8270000" />
+      <workItem from="1622394487907" duration="259000" />
+      <workItem from="1623445980238" duration="112000" />
+      <workItem from="1625537207057" duration="848000" />
+      <workItem from="1625541750888" duration="733000" />
+      <workItem from="1625542540146" duration="276000" />
+      <workItem from="1625542891946" duration="301000" />
+      <workItem from="1625543241570" duration="373000" />
+      <workItem from="1625544075298" duration="1841000" />
+      <workItem from="1625564780248" duration="621000" />
+      <workItem from="1625880629967" duration="703000" />
+      <workItem from="1626376103584" duration="4388000" />
+      <workItem from="1626387507859" duration="40671000" />
+      <workItem from="1626519872228" duration="13094000" />
+      <workItem from="1626573284794" duration="4449000" />
+      <workItem from="1626578518102" duration="1939000" />
+      <workItem from="1626580532468" duration="476000" />
+      <workItem from="1626625934353" duration="2116000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../Program Files/Amazon Corretto/jdk11.0.10_9/lib/src.zip!/jdk.internal.vm.compiler/org.graalvm.compiler.core.test/src/org/graalvm/compiler/core/test/ImplicitNullCheckTest.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
