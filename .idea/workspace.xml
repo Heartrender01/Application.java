@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="no message">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,13 +91,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,7 +142,8 @@
       <workItem from="1626573284794" duration="4449000" />
       <workItem from="1626578518102" duration="1939000" />
       <workItem from="1626580532468" duration="476000" />
-      <workItem from="1626625934353" duration="11464000" />
+      <workItem from="1626625934353" duration="11769000" />
+      <workItem from="1626645633493" duration="2383000" />
     </task>
     <task id="LOCAL-00001" summary="no message">
       <created>1626628214814</created>
@@ -162,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626639157891</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="no message">
+      <created>1626645575054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626645575054</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
