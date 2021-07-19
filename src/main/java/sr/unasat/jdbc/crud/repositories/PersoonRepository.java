@@ -37,16 +37,14 @@ public class PersoonRepository {
             String sql = "select * from persoon";
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
-            //STEP 5: Extract data from result set
+
             while (rs.next()) {
-                //Retrieve by column name
+
                 int id = rs.getInt("id");
                 String naam = rs.getString("naam");
-            /*    //Display values
-               System.out.print("ID: " + id);
-               System.out.print(", Age: " + naam);*/
+
                 persoonList.add(new Persoon(id, naam));
-                //  persoonList.add(new Persoon(rs.getInt("id"), rs.getString("naam")));
+
             }
             rs.close();
 

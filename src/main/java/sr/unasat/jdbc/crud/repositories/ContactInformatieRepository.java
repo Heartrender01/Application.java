@@ -72,8 +72,9 @@ public class ContactInformatieRepository {
         return contactList;
     }
 
+
     public ContactInformatie findOneRecord(int telNum, String ciAdres) {
-        ContactInformatie contactInformatie = null;
+        ContactInformatie recordFound = null;
         PreparedStatement stmt = null;
         try {
             String sql = "select ci.id, ci.adres, ci.telefoon_nummer , p.id pid, p.naam pnaam, l.id lid, l.naam land_naam" +
@@ -82,8 +83,6 @@ public class ContactInformatieRepository {
                     " on p.id = ci.persoon_id" +
                     " join land l" +
                     " on l.id = ci.land_id where ci.telefoon_nummer = ? or ci.adres = ?";
-
-
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, telNum);
             stmt.setString(2, ciAdres);
@@ -104,7 +103,7 @@ public class ContactInformatieRepository {
                 String landNaam = rs.getString("land_naam");
                 Land land = new Land(landId, landNaam);
 
-                contactInformatie = new ContactInformatie(id, adres, telefoonNummer, persoon, land);
+                recordFound = new ContactInformatie(id, adres, telefoonNummer, persoon, land);
             }
             rs.close();
 
@@ -114,7 +113,8 @@ public class ContactInformatieRepository {
         } finally {
 
         }
-        return contactInformatie;
+        return recordFound;
+
     }
 
     public int updateOneRecord(ContactInformatie contact) {
@@ -126,6 +126,7 @@ public class ContactInformatieRepository {
             stmt.setInt(1, contact.getTelefoonNummer());
             stmt.setInt(2, contact.getPersoon().getId());
             stmt.setInt(3, contact.getId());
+
             result = stmt.executeUpdate();
             System.out.println("resultset: " + result);
 

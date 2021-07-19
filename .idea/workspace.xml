@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="no message">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/ContactInformatieRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/PersoonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/repositories/PersoonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +75,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -143,7 +148,7 @@
       <workItem from="1626578518102" duration="1939000" />
       <workItem from="1626580532468" duration="476000" />
       <workItem from="1626625934353" duration="11769000" />
-      <workItem from="1626645633493" duration="2383000" />
+      <workItem from="1626645633493" duration="16587000" />
     </task>
     <task id="LOCAL-00001" summary="no message">
       <created>1626628214814</created>
@@ -173,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626645575054</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="no message">
+      <created>1626648237331</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626648237331</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
