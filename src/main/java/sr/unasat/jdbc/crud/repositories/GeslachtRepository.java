@@ -42,11 +42,9 @@ public class GeslachtRepository {
                 //Retrieve by column name
                 int id = rs.getInt("id");
                 String geslacht = rs.getString("geslacht");
-            /*    //Display values
-               System.out.print("ID: " + id);
-               System.out.print(", Age: " + naam);*/
+
                 geslachtList.add(new Geslacht(id, geslacht));
-                //  geslachtList.add(new Geslacht(rs.getInt("id"), rs.getString("geslacht")));
+
             }
             rs.close();
 

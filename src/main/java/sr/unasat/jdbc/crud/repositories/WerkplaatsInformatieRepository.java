@@ -38,6 +38,7 @@ public class WerkplaatsInformatieRepository {
                     " on p.id = wi.persoon_id" +
                     " join afdeling a  " +
                     " on a.id = wi.afdeling_id";
+
             ResultSet rs = stmt.executeQuery(sql);
             System.out.println("resultset: " + rs);
 
@@ -67,17 +68,16 @@ public class WerkplaatsInformatieRepository {
         return infoList;
     }
 
-    public int deleteAllRecords(WerkplaatsInformatie werkplaatsInformatie){
+    public int deleteOneRecord(WerkplaatsInformatie werkplaatsInformatie) {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM werkplaats_informatie " +
-                    "WHERE werk_informatie.id > ?";
-
+            String sql = "DELETE FROM werkplaats_informatie WHERE werkplaats_informatie.id = ?";
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, werkplaatsInformatie.getId());
             result = stmt.executeUpdate();
-            System.out.println("deleted: " );
+
+            System.out.println("deleted: " + werkplaatsInformatie.getId());
 
         } catch (SQLException e) {
 
@@ -86,8 +86,9 @@ public class WerkplaatsInformatieRepository {
         }
         return result;
     }
-    public WerkplaatsInformatie findOneRecord(int wi_id) {
-        WerkplaatsInformatie recordFound = null;
+
+    public WerkplaatsInformatie findOneRecord(int werkplaatsinformatie) {
+        WerkplaatsInformatie werkplaatsInfo = null;
         PreparedStatement stmt = null;
         try {
             String sql = "select wi.id, p.id pid, p.naam pnaam, a.id aid, a.afdeling afdeling_naam" +
@@ -96,26 +97,27 @@ public class WerkplaatsInformatieRepository {
                     " on p.id = wi.persoon_id" +
                     " join afdeling a  " +
                     " on a.id = wi.afdeling_id" +
-                    " where wi_id = ?";
+                    " where wi.id = ? ";
 
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, wi_id);
-
+            stmt.setInt(1, werkplaatsinformatie);
             ResultSet rs = stmt.executeQuery();
             System.out.println("resultset: " + rs);
 
-            int id = rs.getInt("id");
+            if (rs.next()) {
 
-            int persoonId = rs.getInt("pid");
-            String persoonNaam = rs.getString("pnaam");
-            Persoon persoon = new Persoon(persoonId, persoonNaam);
+                int id = rs.getInt("wi.id");
 
-            int afdelingId = rs.getInt("aid");
-            String afdelingNaam = rs.getString("afdeling_naam");
-            Afdeling afdeling = new Afdeling(afdelingId, afdelingNaam);
+                int persoonId = rs.getInt("pid");
+                String persoonNaam = rs.getString("pnaam");
+                Persoon persoon = new Persoon(persoonId, persoonNaam);
 
-            recordFound = new WerkplaatsInformatie(id, persoon, afdeling);
+                int afdelingId = rs.getInt("aid");
+                String afdelingNaam = rs.getString("afdeling_naam");
+                Afdeling afdeling = new Afdeling(afdelingId, afdelingNaam);
 
+                werkplaatsInfo = new WerkplaatsInformatie(id, persoon, afdeling);
+            }
             rs.close();
 
 
@@ -124,7 +126,48 @@ public class WerkplaatsInformatieRepository {
         } finally {
 
         }
-        return recordFound;
+        return werkplaatsInfo;
+    }
 
+    public int deleteAllRecords(WerkplaatsInformatie werkplaatsInformatie) {
+        PreparedStatement stmt = null;
+        int result = 0;
+        try {
+            String sql = "DELETE FROM werkplaats_informatie WHERE werkplaats_informatie.id > ?";
+            stmt = connection.prepareStatement(sql);
+            stmt.setInt(1, werkplaatsInformatie.getId());
+            result = stmt.executeUpdate();
+
+            System.out.println("deleted all records " + werkplaatsInformatie.getId());
+
+        } catch (SQLException e) {
+
+        } finally {
+
+        }
+        return result;
+    }
+
+    public int insertOneRecord(WerkplaatsInformatie werkplaatsInformatie) {
+        int result = 0;
+        try {
+            String sql = "insert into werkplaats_informatie" +
+                     " set id = ? , persoon_id = ? , afdeling_id = ?";
+            PreparedStatement stmt = connection.prepareStatement(sql);
+
+            stmt.setInt(1 , werkplaatsInformatie.getId());
+            stmt.setInt(2, werkplaatsInformatie.getPersoon().getId());
+            stmt.setInt(3, werkplaatsInformatie.getAfdeling().getId());
+
+
+            result = stmt.executeUpdate();
+            System.out.println("resultset: " + result);
+
+        } catch (SQLException e) {
+
+        } finally {
+
+        }
+        return result;
     }
 }

@@ -6,17 +6,19 @@ public class WerkplaatsInformatie {
     private Afdeling afdeling;
 
 
-    public WerkplaatsInformatie(Integer id, Persoon persoon, Afdeling afdeling) {
+    public WerkplaatsInformatie(Integer id ) {
+        this.id = id;
+    }
+
+    public WerkplaatsInformatie( Integer id,Persoon persoon, Afdeling afdeling) {
         this.id = id;
         this.persoon = persoon;
         this.afdeling = afdeling;
-
     }
 
-    public WerkplaatsInformatie(Persoon persoon, Afdeling afdeling) {
-        this.persoon = persoon;
-        this.afdeling = afdeling;
+    public WerkplaatsInformatie(int id, int persoon, int afdeling) {
     }
+
 
     public Integer getId() {
         return id;
@@ -42,14 +44,13 @@ public class WerkplaatsInformatie {
         this.afdeling = afdeling;
     }
 
-
     @Override
     public String toString() {
-        return "WerkplaatsInfo{" +
+        return "WerkplaatsInformatie{" +
                 "id=" + id +
-                ",persoon=" + persoon +
+                ", persoon=" + persoon +
                 ", afdeling=" + afdeling +
+
                 '}';
     }
-
 }
