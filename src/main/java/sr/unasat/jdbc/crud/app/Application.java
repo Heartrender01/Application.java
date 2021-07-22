@@ -14,33 +14,34 @@ public class Application {
             WerkplaatsInformatieRepository wiRepo = new WerkplaatsInformatieRepository();
 
                 //** deleteOneRecord T3 WORKS
-                //WerkplaatsInformatie result = new WerkplaatsInformatie(6);
+                //WerkplaatsInformatie result = new WerkplaatsInformatie(1);
                 //wiRepo.deleteOneRecord(result);
 
                 //** deleteAllRecords T3 WORKS
-                //WerkplaatsInformatie gone = new WerkplaatsInformatie(3);
+                //WerkplaatsInformatie gone = new WerkplaatsInformatie(1);
                 //wiRepo.deleteAllRecords(gone);
 
                 //--------------------------------------------------------------------------
                 //** insertRecords T3  DOES NOT WORK :)
                 //1.
-                //WerkplaatsInformatie result = new WerkplaatsInformatie (5,5,6);
-                //wiRepo.insertOneRecord(result);
+                WerkplaatsInformatie insert = new WerkplaatsInformatie (1,1,2);
+                wiRepo.insertOneRecord(insert);
 
                 //2.
                 // WerkplaatsInformatie newRecord = new WerkplaatsInformatie(4, 4, 1);
                 //wiRepo.insertRecords(newRecord);
 
                 //3.
-                WerkplaatsInformatie insert = new WerkplaatsInformatie(5, 5, 6);
-                wiRepo.insertOneRecord(insert);
-
+                //WerkplaatsInformatie werkplaatsInformatie = new WerkplaatsInformatie();
+                //werkplaatsInformatie.setId(5);
+                //werkplaatsInformatie.setPersoon(5);
+                //werkplaatsInformatie.setAfdeling(5);
 
 
                 //------------------------------------------------------------------------
 
                         //**select a specific record T3 with T3_ID WORKS
-                        //WerkplaatsInformatie onerecord = wiRepo.findOneRecord(4);
+                        //WerkplaatsInformatie onerecord = wiRepo.findOneRecord(1);
                         //System.out.println( "Single record:" + onerecord);
 
             //List<WerkplaatsInformatie> infoList = wiRepo.findAllRecords();
@@ -49,15 +50,16 @@ public class Application {
             //}
 
             //ContactInformatieRepository ciRepo = new ContactInformatieRepository();
+
             //List<ContactInformatie> contactList = ciRepo.findAllRecords();
             //for (ContactInformatie contact : contactList) {
-             // System.out.println(contact);
-             //}
+            //  System.out.println(contact);
+            // }
 
-            // LandRepository landRepo = new LandRepository();
+             //LandRepository landRepo = new LandRepository();
 
-                    //Land uruguay = new Land(7);
-                    // landRepo.deleteOneRecord(uruguay);
+                    //Land uruguay = new Land("");
+                    //landRepo.deleteOneRecord(uruguay);
 
             // List<Land> landList = landRepo.findAllRecords();
             //for (Land land : landList) {

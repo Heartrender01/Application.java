@@ -1,16 +1,16 @@
 package sr.unasat.jdbc.crud.entities;
 
 public class WerkplaatsInformatie {
-    private Integer id;
+    private int id;
     private Persoon persoon;
     private Afdeling afdeling;
 
 
-    public WerkplaatsInformatie(Integer id ) {
+    public WerkplaatsInformatie(int id) {
         this.id = id;
     }
 
-    public WerkplaatsInformatie( Integer id,Persoon persoon, Afdeling afdeling) {
+    public WerkplaatsInformatie(Integer id, Persoon persoon, Afdeling afdeling) {
         this.id = id;
         this.persoon = persoon;
         this.afdeling = afdeling;
@@ -19,12 +19,11 @@ public class WerkplaatsInformatie {
     public WerkplaatsInformatie(int id, int persoon, int afdeling) {
     }
 
-
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -50,7 +49,6 @@ public class WerkplaatsInformatie {
                 "id=" + id +
                 ", persoon=" + persoon +
                 ", afdeling=" + afdeling +
-
                 '}';
     }
 }

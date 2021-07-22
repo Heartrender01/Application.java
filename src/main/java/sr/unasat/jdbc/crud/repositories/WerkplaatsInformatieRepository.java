@@ -30,7 +30,7 @@ public class WerkplaatsInformatieRepository {
     public List<WerkplaatsInformatie> findAllRecords() {
         List<WerkplaatsInformatie> infoList = new ArrayList<WerkplaatsInformatie>();
         Statement stmt = null;
-        try {
+       try {
             stmt = connection.createStatement();
             String sql = "select wi.id, p.id pid, p.naam pnaam, a.id aid, a.afdeling afdeling_naam" +
                     " from werkplaats_informatie wi" +
@@ -57,14 +57,14 @@ public class WerkplaatsInformatieRepository {
                 infoList.add(new WerkplaatsInformatie(id, persoon, afdeling));
 
             }
-            rs.close();
+           rs.close();
 
 
         } catch (SQLException e) {
 
         } finally {
 
-        }
+       }
         return infoList;
     }
 
@@ -72,7 +72,8 @@ public class WerkplaatsInformatieRepository {
         PreparedStatement stmt = null;
         int result = 0;
         try {
-            String sql = "DELETE FROM werkplaats_informatie WHERE werkplaats_informatie.id = ?";
+            String sql =
+                    " DELETE FROM werkplaats_informatie WHERE werkplaats_informatie.id = ?";
             stmt = connection.prepareStatement(sql);
             stmt.setInt(1, werkplaatsInformatie.getId());
             result = stmt.executeUpdate();
@@ -148,26 +149,99 @@ public class WerkplaatsInformatieRepository {
         return result;
     }
 
-    public int insertOneRecord(WerkplaatsInformatie werkplaatsInformatie) {
-        int result = 0;
+    public void insertOneRecord(WerkplaatsInformatie werkplaatsInfo) {
+        int insert = 0;
         try {
-            String sql = "insert into werkplaats_informatie" +
-                     " set id = ? , persoon_id = ? , afdeling_id = ?";
-            PreparedStatement stmt = connection.prepareStatement(sql);
+            // insert into werkplaats_informatie set id = ? , persoon_id = ?, afdeling_id = ?
 
-            stmt.setInt(1 , werkplaatsInformatie.getId());
-            stmt.setInt(2, werkplaatsInformatie.getPersoon().getId());
-            stmt.setInt(3, werkplaatsInformatie.getAfdeling().getId());
+            String sql = "insert into werkplaats_informatie (id, persoon_id, afdeling_id)" +
+                     " values (? , ? , ?)";
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            statement.setInt(1, werkplaatsInfo.getId());
+            statement.setInt(2, werkplaatsInfo.getPersoon().getId());
+            statement.setInt(3, werkplaatsInfo.getAfdeling().getId());
 
 
-            result = stmt.executeUpdate();
-            System.out.println("resultset: " + result);
+            insert = statement.executeUpdate();
+            System.out.println("resultset: " + insert);
 
         } catch (SQLException e) {
 
         } finally {
 
         }
-        return result;
     }
 }
+
+
+/*SQL
+Xremoves fk+ deletes recordX
+ALTER TABLE contact_informatie
+DROP FOREIGN KEY werkplaats_fk;
+DELETE FROM werkplaats_informatie WHERE werkplaats_informatie.id = ?;
+
+xplaces werkplaats info fkx
+ALTER TABLE contact_informatie
+ADD CONSTRAINT werkplaats_fk
+FOREIGN KEY (werkplaats_id) REFERENCES werkplaats_informatie(id);
+
+insert into werkplaats_informatie
+set  id = ?, persoon_id = ? , afdeling_id = ?;
+
+insert into werkplaats_informatie (id, persoon_id, afdeling_id)
+                      values (1 , 1 , 2),
+                             (2,2,4),
+                             (3,3,1),
+                             (4,4,3);
+
+delete from werkplaats_informatie
+where id > 6;
+
+UPDATE contact_informatie SET werkplaats_id = 4 WHERE id = 4;
+
+    select wi.id, p.id pid, p.naam pnaam, a.id aid, a.afdeling afdeling_naam
+                     from werkplaats_informatie wi
+                     join persoon p
+                     on p.id = wi.persoon_id
+                     join afdeling a
+                     on a.id = wi.afdeling_id
+                 where wi.id = ? ;
+
+delete  from contact_informatie
+where contact_informatie.werkplaats_id > 0;
+
+  insert into werkplaats_informatie
+set  id = ?, persoon_id = ? , afdeling_id = ?;
+
+insert into werkplaats_informatie (id, persoon_id, afdeling_id)
+                      values (1 , 1 , 2),
+                             (2,2,4),
+                             (3,3,1),
+                             (4,4,3);
+
+
+-- does not work while fk is active
+delete from werkplaats_informatie
+where id > 6;
+
+
+UPDATE contact_informatie SET werkplaats_id = 4 WHERE id = 4;
+
+--select specific record
+    select wi.id, p.id pid, p.naam pnaam, a.id aid, a.afdeling afdeling_naam
+                     from werkplaats_informatie wi
+                     join persoon p
+                     on p.id = wi.persoon_id
+                     join afdeling a
+                     on a.id = wi.afdeling_id
+                 where wi.id = ? ;
+
+-- deletes all records
+delete  from contact_informatie
+where contact_informatie.werkplaats_id > 0;
+
+--does not work at same time
+UPDATE contact_informatie SET werkplaats_id = null WHERE werkplaats_id > 0;
+        delete from werkplaats_informatie
+        where id > 0                                                */
