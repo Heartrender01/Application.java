@@ -14,31 +14,30 @@ public class Application {
             WerkplaatsInformatieRepository wiRepo = new WerkplaatsInformatieRepository();
 
                 //** deleteOneRecord T3 WORKS
-                //WerkplaatsInformatie result = new WerkplaatsInformatie(3);
+                //WerkplaatsInformatie result = new WerkplaatsInformatie(2);
                 //wiRepo.deleteOneRecord(result);
 
                 //** deleteAllRecords T3 WORKS
                 //WerkplaatsInformatie delete = new WerkplaatsInformatie(1);
-                 //wiRepo.deleteAllRecords(delete);
+                //wiRepo.deleteAllRecords(delete);
+
+                //**select a specific record T3 with T3_ID WORKS
+                //WerkplaatsInformatie onerecord = wiRepo.findOneRecord(6);
+                //System.out.println( "Single record:" + onerecord);
 
                 //** insertRecords T3
                 //1. Works
-                //WerkplaatsInformatie insert = new WerkplaatsInformatie (6,6,1);
+                //WerkplaatsInformatie insert = new WerkplaatsInformatie (1,2,3);
                 //wiRepo.insertOneRecord(insert);
 
-
-                //**select a specific record T3 with T3_ID WORKS
-                //WerkplaatsInformatie onerecord = wiRepo.findOneRecord(2);
-                //System.out.println( "Single record:" + onerecord);
-
-                //** update a specific record with T3_ID
-                //WerkplaatsInformatie update = new WerkplaatsInformatie(6,7,2);
+                //** update persoonID + afdelingID voor T3_ID
+                //WerkplaatsInformatie update = new WerkplaatsInformatie(1,6,4);
                 //wiRepo.updateOneRecord(update);
 
 
             List<WerkplaatsInformatie> infoList = wiRepo.findAllRecords();
             for (WerkplaatsInformatie info : infoList) {
-            System.out.println(info);
+           System.out.println(info);
             }
 
             //ContactInformatieRepository ciRepo = new ContactInformatieRepository();
