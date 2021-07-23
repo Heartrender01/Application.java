@@ -4,20 +4,41 @@ public class WerkplaatsInformatie {
     private int id;
     private Persoon persoon;
     private Afdeling afdeling;
+    private int werkplaatsId;
+    private int persoonId;
+    private int afdelingId;
 
 
-    public WerkplaatsInformatie(int id) {
+    public WerkplaatsInformatie(int id, int persoonId, int afdelingId) {
         this.id = id;
+        this.persoonId = persoonId;
+        this.afdelingId = afdelingId;
     }
 
-    public WerkplaatsInformatie(Integer id, Persoon persoon, Afdeling afdeling) {
-        this.id = id;
+    public void WerkplaatsInformatie2 (int persoonId, int afdelingId, int werkplaatsId) {
+        this.persoonId = persoonId;
+        this.afdelingId =  afdelingId;
+        this.werkplaatsId = werkplaatsId;
+    }
+
+    public void werkplaatsInformatie (Integer werkplaatsId, int persoonId, int afdelingId) {
+        this.werkplaatsId = werkplaatsId;
+        this.persoonId = persoonId;
+        this.afdelingId = afdelingId;
+    }
+
+    public WerkplaatsInformatie(Integer werkplaatsId, Persoon persoon, Afdeling afdeling) {
+        this.werkplaatsId = werkplaatsId;
         this.persoon = persoon;
         this.afdeling = afdeling;
     }
 
-    public WerkplaatsInformatie(int id, int persoon, int afdeling) {
+    public WerkplaatsInformatie(int werkplaatsid) {
+        this.id = werkplaatsid;
     }
+
+
+
 
     public int getId() {
         return id;
@@ -43,10 +64,34 @@ public class WerkplaatsInformatie {
         this.afdeling = afdeling;
     }
 
+    public int getWerkplaatsId() {
+        return werkplaatsId;
+    }
+
+    public void setWerkplaatsId(int werkplaatsId) {
+        this.werkplaatsId = werkplaatsId;
+    }
+
+    public int getAfdelingId() {
+        return afdelingId;
+    }
+
+    public void setAfdelingId(int afdelingId) {
+        this.afdelingId = afdelingId;
+    }
+
+    public int getPersoonId() {
+        return persoonId;
+    }
+
+    public void setPersoonId(int persoonId) {
+        this.persoonId = persoonId;
+    }
+
     @Override
     public String toString() {
         return "WerkplaatsInformatie{" +
-                "id=" + id +
+                "id=" + werkplaatsId +
                 ", persoon=" + persoon +
                 ", afdeling=" + afdeling +
                 '}';

@@ -14,40 +14,32 @@ public class Application {
             WerkplaatsInformatieRepository wiRepo = new WerkplaatsInformatieRepository();
 
                 //** deleteOneRecord T3 WORKS
-                //WerkplaatsInformatie result = new WerkplaatsInformatie(1);
+                //WerkplaatsInformatie result = new WerkplaatsInformatie(3);
                 //wiRepo.deleteOneRecord(result);
 
                 //** deleteAllRecords T3 WORKS
-                //WerkplaatsInformatie gone = new WerkplaatsInformatie(1);
-                //wiRepo.deleteAllRecords(gone);
+                //WerkplaatsInformatie delete = new WerkplaatsInformatie(1);
+                 //wiRepo.deleteAllRecords(delete);
 
-                //--------------------------------------------------------------------------
-                //** insertRecords T3  DOES NOT WORK :)
-                //1.
-                WerkplaatsInformatie insert = new WerkplaatsInformatie (1,1,2);
-                wiRepo.insertOneRecord(insert);
-
-                //2.
-                // WerkplaatsInformatie newRecord = new WerkplaatsInformatie(4, 4, 1);
-                //wiRepo.insertRecords(newRecord);
-
-                //3.
-                //WerkplaatsInformatie werkplaatsInformatie = new WerkplaatsInformatie();
-                //werkplaatsInformatie.setId(5);
-                //werkplaatsInformatie.setPersoon(5);
-                //werkplaatsInformatie.setAfdeling(5);
+                //** insertRecords T3
+                //1. Works
+                //WerkplaatsInformatie insert = new WerkplaatsInformatie (6,6,1);
+                //wiRepo.insertOneRecord(insert);
 
 
-                //------------------------------------------------------------------------
+                //**select a specific record T3 with T3_ID WORKS
+                //WerkplaatsInformatie onerecord = wiRepo.findOneRecord(2);
+                //System.out.println( "Single record:" + onerecord);
 
-                        //**select a specific record T3 with T3_ID WORKS
-                        //WerkplaatsInformatie onerecord = wiRepo.findOneRecord(1);
-                        //System.out.println( "Single record:" + onerecord);
+                //** update a specific record with T3_ID
+                //WerkplaatsInformatie update = new WerkplaatsInformatie(6,7,2);
+                //wiRepo.updateOneRecord(update);
 
-            //List<WerkplaatsInformatie> infoList = wiRepo.findAllRecords();
-            //for (WerkplaatsInformatie info : infoList) {
-            //System.out.println(info);
-            //}
+
+            List<WerkplaatsInformatie> infoList = wiRepo.findAllRecords();
+            for (WerkplaatsInformatie info : infoList) {
+            System.out.println(info);
+            }
 
             //ContactInformatieRepository ciRepo = new ContactInformatieRepository();
 
@@ -58,13 +50,13 @@ public class Application {
 
              //LandRepository landRepo = new LandRepository();
 
-                    //Land uruguay = new Land("");
-                    //landRepo.deleteOneRecord(uruguay);
+                    //Land uruguay = new Land("Italy");
+                    //landRepo.insertOneRecord(uruguay);
 
-            // List<Land> landList = landRepo.findAllRecords();
+             //List<Land> landList = landRepo.findAllRecords();
             //for (Land land : landList) {
-            // System.out.println(land);
-            // }
+             //System.out.println(land);
+             //}
 
             //GeslachtRepository geslachtRepo = new GeslachtRepository();
             //List<Geslacht> geslachtList = geslachtRepo.findAllRecords();
@@ -74,13 +66,13 @@ public class Application {
 
             //AfdelingRepository afdelingRepo = new AfdelingRepository();
 
-                    // Afdeling products = new Afdeling("Products");
-                    // afdelingRepo.insertOneRecord(products);
+                    // Afdeling products = new Afdeling("QAT");
+                     //afdelingRepo.insertOneRecord(products);
 
-            // List<Afdeling> afdelingList = afdelingRepo.findAllRecords();
+             //List<Afdeling> afdelingList = afdelingRepo.findAllRecords();
             //for (Afdeling afdeling : afdelingList) {
-            //   System.out.println(afdeling);
-            //  }
+              // System.out.println(afdeling);
+             //}
 
 
             //PersoonRepository persoonRepo = new PersoonRepository();

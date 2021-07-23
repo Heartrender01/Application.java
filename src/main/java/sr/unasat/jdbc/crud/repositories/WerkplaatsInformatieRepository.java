@@ -44,7 +44,7 @@ public class WerkplaatsInformatieRepository {
 
             while (rs.next()) {
 
-                int id = rs.getInt("id");
+                int id = rs.getInt("wi.id");
 
                 int persoonId = rs.getInt("pid");
                 String persoonNaam = rs.getString("pnaam");
@@ -136,10 +136,10 @@ public class WerkplaatsInformatieRepository {
         try {
             String sql = "DELETE FROM werkplaats_informatie WHERE werkplaats_informatie.id > ?";
             stmt = connection.prepareStatement(sql);
-            stmt.setInt(1, werkplaatsInformatie.getId());
+            stmt.setInt(1, werkplaatsInformatie.getWerkplaatsId());
             result = stmt.executeUpdate();
 
-            System.out.println("deleted all records " + werkplaatsInformatie.getId());
+            System.out.println("deleted all records " + werkplaatsInformatie.getWerkplaatsId());
 
         } catch (SQLException e) {
 
@@ -149,7 +149,7 @@ public class WerkplaatsInformatieRepository {
         return result;
     }
 
-    public void insertOneRecord(WerkplaatsInformatie werkplaatsInfo) {
+    public void insertOneRecord(WerkplaatsInformatie werkplaatsInformatie) {
         int insert = 0;
         try {
             // insert into werkplaats_informatie set id = ? , persoon_id = ?, afdeling_id = ?
@@ -158,9 +158,9 @@ public class WerkplaatsInformatieRepository {
                      " values (? , ? , ?)";
             PreparedStatement statement = connection.prepareStatement(sql);
 
-            statement.setInt(1, werkplaatsInfo.getId());
-            statement.setInt(2, werkplaatsInfo.getPersoon().getId());
-            statement.setInt(3, werkplaatsInfo.getAfdeling().getId());
+            statement.setInt(1, werkplaatsInformatie.getWerkplaatsId());
+            statement.setInt(2, werkplaatsInformatie.getPersoonId());
+            statement.setInt(3, werkplaatsInformatie.getAfdelingId());
 
 
             insert = statement.executeUpdate();
@@ -171,6 +171,29 @@ public class WerkplaatsInformatieRepository {
         } finally {
 
         }
+    }
+    public int updateOneRecord(WerkplaatsInformatie werkplaatsInformatie) {
+        PreparedStatement stmt = null;
+        int update = 0;
+        try {
+            String sql = "update werkplaats_informatie wi " +
+                    "set wi.persoon_id = ?, wi.afdeling_id = ? " +
+                    "where wi.id = ?";
+            stmt = connection.prepareStatement(sql);
+
+            stmt.setInt(1, werkplaatsInformatie.getPersoonId());
+            stmt.setInt(2, werkplaatsInformatie.getAfdelingId());
+            stmt.setInt(3,  werkplaatsInformatie.getId());
+
+            update = stmt.executeUpdate();
+            System.out.println("resultset: " + update);
+
+        } catch (SQLException e) {
+
+        } finally {
+
+        }
+        return update;
     }
 }
 
