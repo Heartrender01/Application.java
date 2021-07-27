@@ -9,6 +9,12 @@ public class WerkplaatsInformatie {
     private int afdelingId;
 
 
+    public WerkplaatsInformatie(Integer werkplaatsId, Persoon persoon, Afdeling afdeling) {
+        this.werkplaatsId = werkplaatsId;
+        this.persoon = persoon;
+        this.afdeling = afdeling;
+    }
+
     public WerkplaatsInformatie(int id, int persoonId, int afdelingId) {
         this.id = id;
         this.persoonId = persoonId;
@@ -27,17 +33,9 @@ public class WerkplaatsInformatie {
         this.afdelingId = afdelingId;
     }
 
-    public WerkplaatsInformatie(Integer werkplaatsId, Persoon persoon, Afdeling afdeling) {
-        this.werkplaatsId = werkplaatsId;
-        this.persoon = persoon;
-        this.afdeling = afdeling;
-    }
-
     public WerkplaatsInformatie(int werkplaatsid) {
         this.id = werkplaatsid;
     }
-
-
 
 
     public int getId() {

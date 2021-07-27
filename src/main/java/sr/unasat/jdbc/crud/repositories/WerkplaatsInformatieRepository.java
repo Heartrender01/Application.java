@@ -139,7 +139,7 @@ public class WerkplaatsInformatieRepository {
             stmt.setInt(1, werkplaatsInformatie.getWerkplaatsId());
             result = stmt.executeUpdate();
 
-            System.out.println("deleted all records " + werkplaatsInformatie.getWerkplaatsId());
+            System.out.println("deleted all records");
 
         } catch (SQLException e) {
 

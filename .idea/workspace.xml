@@ -7,9 +7,10 @@
     <list default="true" id="5be627b3-ec5b-4bc1-8608-4d2c2131c5fe" name="Default Changelist" comment="no message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/app/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/adres_boek.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/adres_boek.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/adres_boek.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/adres_boek.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/entities/WerkplaatsInformatie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sr/unasat/jdbc/crud/repositories/WerkplaatsInformatieRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +151,11 @@
       <workItem from="1626780841040" duration="12032000" />
       <workItem from="1626796519169" duration="13453000" />
       <workItem from="1626816223641" duration="30953000" />
-      <workItem from="1627035210573" duration="17609000" />
+      <workItem from="1627035210573" duration="19405000" />
+      <workItem from="1627080465688" duration="18000" />
+      <workItem from="1627084690969" duration="676000" />
+      <workItem from="1627141065907" duration="2436000" />
+      <workItem from="1627155050062" duration="2998000" />
     </task>
     <task id="LOCAL-00001" summary="no message">
       <created>1626628214814</created>
@@ -215,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627059535142</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="no message">
+      <created>1627071635276</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1627071635276</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
